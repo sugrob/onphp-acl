@@ -1,0 +1,45 @@
+{
+    "name": "sugrob/onphp-acl",
+    "description": "ACL for onphp-based projects",
+    "keywords": ["onphp", "acl"],
+    "homepage": "https://github.com/sugrob/onphp-acl",
+    "type": "library",
+    "version": "0.1.0",
+    "license": "GPL-3.0",
+    "authors" : [
+      {
+        "name": "Dmitriy Snezhinskiy",
+        "email" : "sugrob2008@gmail.com"
+      }
+    ],
+    "repositories": [
+        {
+            "type": "git",
+            "url": "https://github.com/onPHP/onphp-framework"
+        },
+        {
+          "type": "git",
+          "url": "https://github.com/sugrob/onphp-toolkit"
+        }
+    ],
+    "require": {
+      "php": ">=7.0.0",
+      "onphp/onphp": "dev-master",
+      "sugrob/onphp-toolkit": "dev-master"
+    },
+    "autoload": {
+      "psr-4": {
+        "sugrob\\OnPHPACL\\": "src"
+      }
+    },
+    "autoload-dev": {
+      "psr-4": {
+        "sugrob\\OnPHPACL\\Tests\\": "tests"
+      }
+    },
+    "require-dev": {
+      "phpunit/phpunit": "^9.0",
+      "onphp/onphp": "dev-master",
+      "sugrob/onphp-toolkit": "dev-master"
+    }
+}
