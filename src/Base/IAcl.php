@@ -1,6 +1,6 @@
 <?php
 
-namespace sugrob\OnPHPACL\Base;
+namespace sugrob\OnPHP\Acl\Base;
 
 interface IAcl {
 	public function getGroup():IAclGroup;

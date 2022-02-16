@@ -1,9 +1,9 @@
 <?php
 
-namespace sugrob\OnPHPACL\Flow;
+namespace sugrob\OnPHP\Acl\Flow;
 
-use sugrob\OnPHPACL\Base\IAclContext;
-use sugrob\OnPHPACL\Base\IAclRight;
+use sugrob\OnPHP\Acl\Base\IAclContext;
+use sugrob\OnPHP\Acl\Base\IAclRight;
 
 class ActionAccessResolver
 {

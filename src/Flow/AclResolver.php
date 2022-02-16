@@ -1,17 +1,17 @@
 <?
 
-namespace sugrob\OnPHPACL\Flow;
+namespace sugrob\OnPHP\Acl\Flow;
 
 use OnPHP\Core\Base\Identifiable;
 use OnPHP\Core\Base\Instantiatable;
 use OnPHP\Core\Base\Singleton;
-use sugrob\OnPHPACL\Auth\AuthManager;
-use sugrob\OnPHPACL\Base\IAclContext;
-use sugrob\OnPHPACL\Base\IAclGroup;
-use sugrob\OnPHPACL\Base\IAclGroupAssociated;
-use sugrob\OnPHPACL\Base\IAclRight;
-use sugrob\OnPHPACL\Base\IOwner;
-use sugrob\OnPHPACL\Base\IOwnerAssociated;
+use sugrob\OnPHP\Acl\Auth\AuthManager;
+use sugrob\OnPHP\Acl\Base\IAclContext;
+use sugrob\OnPHP\Acl\Base\IAclGroup;
+use sugrob\OnPHP\Acl\Base\IAclGroupAssociated;
+use sugrob\OnPHP\Acl\Base\IAclRight;
+use sugrob\OnPHP\Acl\Base\IOwner;
+use sugrob\OnPHP\Acl\Base\IOwnerAssociated;
 
 class AclResolver extends Singleton implements Instantiatable
 {

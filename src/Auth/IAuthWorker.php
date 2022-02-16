@@ -1,8 +1,8 @@
 <?php
 
-namespace sugrob\OnPHPACL\Auth;
+namespace sugrob\OnPHP\Acl\Auth;
 
-use sugrob\OnPHPACL\Base\IAclUser;
+use sugrob\OnPHP\Acl\Base\IAclUser;
 
 interface IAuthWorker
 {

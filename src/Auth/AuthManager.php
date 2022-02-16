@@ -1,18 +1,18 @@
 <?
 
-namespace sugrob\OnPHPACL\Auth;
+namespace sugrob\OnPHP\Acl\Auth;
 
 use OnPHP\Core\Base\Instantiatable;
 use OnPHP\Core\Base\Singleton;
 use OnPHP\Core\Exception\WrongArgumentException;
-use sugrob\ OnPHPACL\Base\IAclUser;
-use sugrob\ OnPHPACL\Exception\BadLoginException;
-use sugrob\ OnPHPACL\Exception\BadPasswordException;
-use sugrob\ OnPHPACL\Exception\InvalidPasswordException;
-use sugrob\ OnPHPACL\Exception\UserNotActivatedException;
-use sugrob\ OnPHPACL\Exception\UserNotFoundException;
-use sugrob\OnPHPToolkit\PassHasher;
-use sugrob\OnPHPToolkit\Utils\IHasher;
+use sugrob\OnPHP\Acl\Base\IAclUser;
+use sugrob\OnPHP\Acl\Exception\BadLoginException;
+use sugrob\OnPHP\Acl\Exception\BadPasswordException;
+use sugrob\OnPHP\Acl\Exception\InvalidPasswordException;
+use sugrob\OnPHP\Acl\Exception\UserNotActivatedException;
+use sugrob\OnPHP\Acl\Exception\UserNotFoundException;
+use sugrob\OnPHP\Toolkit\Utils\PassHasher;
+use sugrob\OnPHP\Toolkit\Utils\IHasher;
 
 class AuthManager extends Singleton implements Instantiatable
 {

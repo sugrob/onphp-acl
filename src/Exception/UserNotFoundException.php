@@ -1,6 +1,6 @@
 <?php
 
-namespace sugrob\OnPHPACL\Exception;
+namespace sugrob\OnPHP\Acl\Exception;
 
 use OnPHP\Core\Exception\BaseException;
 

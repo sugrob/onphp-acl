@@ -29,12 +29,12 @@
     },
     "autoload": {
       "psr-4": {
-        "sugrob\\OnPHPACL\\": "src"
+        "sugrob\\OnPHP\\Acl\\": "src"
       }
     },
     "autoload-dev": {
       "psr-4": {
-        "sugrob\\OnPHPACL\\Tests\\": "tests"
+        "sugrob\\OnPHP\\Acl\\Tests\\": "tests"
       }
     },
     "require-dev": {
