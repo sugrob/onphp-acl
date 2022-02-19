@@ -3,6 +3,7 @@
 namespace sugrob\OnPHP\Acl\Auth;
 
 use OnPHP\Core\Base\Instantiatable;
+use OnPHP\Core\Base\Session;
 use OnPHP\Core\Base\Singleton;
 use OnPHP\Core\Exception\WrongArgumentException;
 use sugrob\OnPHP\Acl\Base\IAclUser;

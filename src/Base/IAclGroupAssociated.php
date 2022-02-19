@@ -6,5 +6,5 @@ interface IAclGroupAssociated {
 	/**
 	 * @return IAclGroup
 	 */
-	public function getAclGroup(): IAclGroup;
+	public function getAclGroup()/*:IAclGroup*/;
 }

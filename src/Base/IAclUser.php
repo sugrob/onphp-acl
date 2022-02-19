@@ -9,5 +9,8 @@ interface IAclUser {
 	public function getPassword();
 	public function setPassword($password);
 
-	public function isActivated(): bool;
+	/**
+	 * @return bool
+	 */
+	public function isActivated()/*:bool*/;
 }

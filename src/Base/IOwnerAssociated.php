@@ -6,6 +6,6 @@ interface IOwnerAssociated {
 	/**
 	 * @return IOwner
 	 */
-	public function getOwner();
+	public function getOwner()/*:IOwner*/;
 	public function setOwner(IOwner $owner);
 }
