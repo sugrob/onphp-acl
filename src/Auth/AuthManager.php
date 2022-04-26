@@ -1,10 +1,15 @@
-<?
+<?php
 
 namespace sugrob\OnPHP\Acl\Auth;
 
+use OnPHP\Core\Base\Assert;
 use OnPHP\Core\Base\Instantiatable;
+use OnPHP\Core\Base\Session;
 use OnPHP\Core\Base\Singleton;
 use OnPHP\Core\Exception\WrongArgumentException;
+use OnPHP\Main\Flow\HttpRequest;
+use sugrob\OnPHP\Acl\Base\IAclGroup;
+use sugrob\OnPHP\Acl\Base\IAclGroupAssociated;
 use sugrob\OnPHP\Acl\Base\IAclUser;
 use sugrob\OnPHP\Acl\Exception\BadLoginException;
 use sugrob\OnPHP\Acl\Exception\BadPasswordException;
@@ -103,15 +108,15 @@ class AuthManager extends Singleton implements Instantiatable
 	}
 
 	/**
-	 * @param IAclUser | class name
-	 * @return Authorization
+	 * @param IAclUser | string
+	 * @return AuthManager
 	 */
 	public function setUserClass($class)
 	{
-		if (!is_object($class)) {
-			$object = CoreUtils::guessObject($class);
-		} else
+		if (is_object($class)) {
 			$object = $class;
+		} else
+			$object = new $class;
 
 		if ($object instanceof IAclUser) {
 			$this->nullUser = $object;
@@ -120,18 +125,18 @@ class AuthManager extends Singleton implements Instantiatable
 				|| get_class($this->user) != get_class($this->nullUser)
 			) {
 				//In case of user type has been changed, let's try to auth him by sessions or cookies
-				$this->user == null;
+				$this->user = null;
 				$this->setUserFromSession();
 			}
 
-			return self::me();
+			return $this;
 		} else
 			throw new WrongArgumentException('Argument must be valid class name or object instance of IAclUser');
 
 	}
 
 	/**
-	 * @return UserAuth
+	 * @return IAclUser
 	 */
 	public function setRemember($value)
 	{
