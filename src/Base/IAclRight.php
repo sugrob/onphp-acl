@@ -3,6 +3,13 @@
 namespace sugrob\OnPHP\Acl\Base;
 
 interface IAclRight {
-	public function getId():int;
-	public function getName():string;
+	/**
+	 * @return int
+	 */
+	public function getId()/*:int*/;
+
+	/**
+	 * @return string
+	 */
+	public function getName()/*:string*/;
 }
